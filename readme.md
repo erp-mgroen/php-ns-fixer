@@ -1,5 +1,5 @@
 # PHP Namespace Fixer [![Build Status](https://travis-ci.org/kostaspt/php-ns-fixer.svg?branch=master)](https://travis-ci.org/kostaspt/php-ns-fixer)
-> Automatically find (and fix) wrong namespaces in your PHP projects.
+> Automatically find and fix wrong namespaces in your PHP projects.
 
 ## Install
 ```bash
