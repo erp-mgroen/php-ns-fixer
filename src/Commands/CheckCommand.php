@@ -31,7 +31,7 @@ class CheckCommand extends Command
      */
     protected function configure()
     {
-        $this->setName('check')
+        $this->setName('fix')
             ->setDefinition([
                 new InputArgument('path', InputArgument::REQUIRED, 'The path.'),
                 new InputOption('prefix', 'P', InputOption::VALUE_REQUIRED, 'Namespace prefix.'),
