@@ -1,5 +1,5 @@
 {
-    "name": "kostaspt/php-ns-fixer",
+    "name": "erp-mgroen/php-ns-fixer",
     "description": "Find wrong namespaces in your PHP projects",
     "type": "application",
     "license": "MIT",
