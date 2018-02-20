@@ -36,6 +36,10 @@ class Checker
             return new Result($this->file, true, '', '');
         }
 
+        if ($actualNamespace !== $expectedNamespace) {
+            $this->replaceNamespace($expectedNamespace);
+        }
+
         return new Result($this->file, $actualNamespace === $expectedNamespace, $actualNamespace, $expectedNamespace);
     }
 
@@ -74,5 +78,13 @@ class Checker
         }
 
         return trim($regex->results()[0]->group(1));
+    }
+
+    private function replaceNamespace(string $newNamespace)
+    {
+        $result = Regex::replace('/namespace (.*?)(;|{|$)/', "namespace $newNamespace;", $this->file->getContents());
+        $content = $result->result();
+        $file = $this->file->openFile('w');
+        $file->fwrite($content);
     }
 }
